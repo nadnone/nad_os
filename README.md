@@ -12,13 +12,9 @@ Mon but étant de mieux comprendre le noyaux linux et le chargement d'un systèm
 -----------------------
 
 ## Arborescence du projet
-- `kernel`: noyau linux 6.0.9 compilé
-- `ramdisk`: fichier binaire nécessaire au chargement du noyau
+- `boot`: dossier contenant les fichiers nécessaires au démmarrage
 - `nados.iso`: fichier ISO bootable contenant le projet compilé
-- `init`: fichier se lancant au démarrage du noyau
-- `grub.cfg`: configuration du bootloader GRUB pour le chargement du noyau dans la RAM
 - `rootbuild.tar`: fichier compressé contenant la racine du système
-
 
 ## Boot avec qemu
 ```
@@ -26,8 +22,5 @@ $ qemu-system-x86_64 -m 2048 -kernel ./kernel -initrd ./ramdisk -nographic -appe
 ```
 ---------------------
 
-## Problèmes actuels
-Pour le moment le boot avec qemu à l'air de bien fonctionner. Cependant le boot via l'image ISO sur VirtualBox a des soucis de montages
-
-![demo qemu](./demo/qemu_demo.png)
+## demo
 ![demo qemu](./demo/virtualbox_iso_demo.png)
